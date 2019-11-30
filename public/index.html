@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>I'm main page.</title>
+    <link rel="stylesheet" href="src/css/style.css" />
+  </head>
+  <body>
+    <h3>Home.</h3>
+  </body>
+  <script type="text/javascript">
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker
+        .register("/sw.js") //, { scope: "/help/" }
+        .then(() => {
+          console.log("sW registered");
+        });
+    }
+  </script>
+</html>
